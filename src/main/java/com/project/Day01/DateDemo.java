@@ -13,15 +13,16 @@ import java.util.Date;
 public class DateDemo {
     public static void main(String[] args) {
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
-        System.out.println(simpleDateFormat.format(new Date()));
+        System.out.println(simpleDateFormat.format(new Date()));//返回一个stringbuffer类型
         try {
-            Date datenew = simpleDateFormat.parse("2018-08-28 15:30:30");
+            Date datenew = simpleDateFormat.parse("2018-08-28 15:30:30");//返回一个date类型
         } catch (ParseException e) {
             e.printStackTrace();
         }
-        Calendar calendar = Calendar.getInstance();
+        //日历操作类Calendar
+        Calendar calendar = Calendar.getInstance();//创建Calendar对象
         // 或者用 Date 来初始化 Calendar 对象
-        calendar.setTime(new Date());
+        calendar.setTime(new Date());//设置日期
 
         //System.out.println(str);
         // 显示年份
